@@ -1,17 +1,14 @@
-import React from 'react';
+// Las dos primeras lineas de 'import' son obligatorias
+
+// 1) Tener a react en Scope
+// import React from 'react';
+
+// 2) Tener a ReactDOM en scope
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+// 3) Tener por lo menos un componente > creamos un nuevo js > App.js
+import App from './app';
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// 4) Primero pasamos un valor A ( en este caso la funcion), y luego un valor B(Obetenemos el elemento del HTML)
+ReactDOM.render(<App/>, document.getElementById('root'));
