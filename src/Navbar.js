@@ -4,7 +4,7 @@ function Navbar(){
         <div className="container-fluid">
             <a href="foo" className="navbar-brand">
                 <img src="/img/logo.png" alt="" width='100' height='80' className="d-inline-block align-text-middle"/>
-                Proyecto E-commerse
+                Proyecto E-commerce
             </a>
 
             <div className="collapse navbar-collapse" id="navbarNav">
