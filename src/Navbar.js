@@ -1,7 +1,6 @@
 import CartWidget from './CartWidget'
 
-function Navbar(parametros){
-    console.log(parametros.edad)
+function Navbar(){
     return(
 
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -41,13 +40,4 @@ function Navbar(parametros){
     )
 }
 
-function ItemListCointainer(){
-    return(
-        
-        <h3>Titulo provisional</h3>
-    )
-}
-
 export default Navbar
-
-export default ItemListCointainer

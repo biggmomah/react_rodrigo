@@ -1,11 +1,17 @@
 import Navbar from './Navbar'
-
+import ItemListContainer from './ItemListContainer'
 
 function App(){
 
+    const dato= {
+        nombre: "PRODUCTO 1",
+        precio: 1
+    }
+
     return (
     <>
-     <Navbar id='e-commerce' edad={40}/>
+     <Navbar/>
+     <ItemListContainer titulo={dato}/>
     </>
     )
 }
