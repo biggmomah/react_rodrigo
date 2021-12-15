@@ -1,7 +1,12 @@
-function Navbar(){
+import CartWidget from './CartWidget'
+
+function Navbar(parametros){
+    console.log(parametros.edad)
     return(
+
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
+
             <a href="foo" className="navbar-brand">
                 <img src="/img/logo.png" alt="" width='100' height='80' className="d-inline-block align-text-middle"/>
                 Proyecto E-commerce
@@ -21,6 +26,12 @@ function Navbar(){
                         <a href="foo" className="nav-link">Productos</a>
                     </li>
 
+                    <li className='nav-item'>
+                        <a href="foo">
+                            <CartWidget/>
+                        </a>
+                    </li>
+
                 </ul>
             </div>
         </div>
@@ -30,4 +41,13 @@ function Navbar(){
     )
 }
 
+function ItemListCointainer(){
+    return(
+        
+        <h3>Titulo provisional</h3>
+    )
+}
+
 export default Navbar
+
+export default ItemListCointainer

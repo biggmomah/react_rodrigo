@@ -1,9 +1,11 @@
 import Navbar from './Navbar'
 
+
 function App(){
+
     return (
     <>
-     <Navbar/>
+     <Navbar id='e-commerce' edad={40}/>
     </>
     )
 }
