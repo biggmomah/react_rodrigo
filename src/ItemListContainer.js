@@ -1,4 +1,6 @@
-function ItemListCointainer({titulo:{nombre, precio}}){
+function ItemListCointainer({titulo}){
+
+     const{nombre, precio} = titulo
      
     return(
         <h3>{nombre}
