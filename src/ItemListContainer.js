@@ -1,23 +1,17 @@
-function ItemListCointainer({titulo}){
-    let contador= 0
+// Los hooks ('useState') no pueden incluirse en condiconales, el primer valor si no es asignado se toma como undefined,
 
-    const aumentadorContador=()=>{
-        console.log('aumentado')
-        contador++
-        console.log(contador)
-    }
+function ItemListCointainer({titulo}){
+
+
     const{nombre, precio} = titulo
-     
+
+
+    
     return(
         <div>
             <h3>{nombre}
                 <p>{precio}</p>
             </h3>
-
-            <div>
-                <p>Contador actual: {contador}</p>
-                <button onClick={aumentadorContador}>aumentar</button>
-            </div>
         </div>
 
         

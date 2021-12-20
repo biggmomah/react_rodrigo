@@ -1,5 +1,6 @@
 import Navbar from './Navbar'
 import ItemListContainer from './ItemListContainer'
+import ItemCount from './ItemCount'
 
 function App(){
 
@@ -12,6 +13,7 @@ function App(){
     <>
      <Navbar/>
      <ItemListContainer titulo={dato}/>
+     <ItemCount stock={5} initial={1} />
     </>
     )
 }
