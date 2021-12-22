@@ -20,6 +20,40 @@ const ItemCount= ({ stock , initial , onAdd }) => {
         console.log('reiniciado')
     }
 
+     /* // Promise completado sincronico
+    const task = new Promise ((resolve, reject) =>{
+        resolve(true)
+    });
+    
+    task.then(result=>{
+        console.log('fddsffds')
+    })
+     */
+
+    /*  
+    const task = new Promise((resolve, reject)=>{
+        reject('mensaje de error')
+    })
+
+    task.then(result =>{
+        console.log('no es error: ' + result);
+    }), err=>{
+        console.log('error: ' + err)
+    } */
+    
+
+    // uso de map
+  /*   
+    const users=[
+        {nombre: 'coder'},
+        {nombre:'house'}
+    ]
+
+    console.log(users.map(user => user.nombre))
+
+        
+    console.log(users.map(user=>user.nombre).join(',')) */
+
     return(
         <div>
             <button type="button" onClick={aumentarContador} className="btn btn-outline-primary btn-sm">Agregar</button>
