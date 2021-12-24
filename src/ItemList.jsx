@@ -47,7 +47,7 @@ function ItemList(){
         <div className="container">
             <div className="row justify-content-between">
                 {
-                    loading ? (<div className="col-auto">CARGANDO....</div>) : (productos.map((productos)=> <Item key={productos.id} producto={productos}/>))
+                    loading ? (<div className="container">CARGANDO....</div>) : (productos.map((producto)=> <Item key={productos.id} producto={producto}/>))
                 }
             </div>
         </div>
