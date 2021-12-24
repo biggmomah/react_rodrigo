@@ -1,4 +1,5 @@
-function Item(producto){
+
+function Item({producto}){
 
    const {id, nombre, stock} = producto
     
@@ -10,6 +11,7 @@ function Item(producto){
                 <h3>Nombre:{nombre}</h3>
                 <p className="card-text text-center">ID: {id}</p>
                 <p>Cantidad: {stock}</p>
+            
             </div>
         </div>
     </div>
