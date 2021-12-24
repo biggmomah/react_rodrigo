@@ -6,21 +6,22 @@ const productosIniciales=[
     {id: 2 , nombre: 'producto 2', stock: 5},
     {id: 3 , nombre: 'producto 3', stock: 5},
     {id: 4 , nombre: 'producto 4', stock: 5}
-
 ]
+
 function ItemList(){
-/* useEffect(()=>{
-    console.log('soy un efecto')
-
-    setTimeout(()=>{
-        console.log('soy el timeout')
-    }, 5000)
-
-    setInterval(()=>{
-        console.log('efecto de interval')
-    }, 2000)
-}) */
-
+    /* useEffect(()=>{
+        console.log('soy un efecto')
+        
+        setTimeout(()=>{
+            console.log('soy el timeout')
+        }, 5000)
+        
+        setInterval(()=>{
+            console.log('efecto de interval')
+        }, 2000)
+    }) */
+    
+    
     const [productos, setProductos]= useState([]);
     const [loading, setLoading]=useState(true)
 
@@ -42,20 +43,15 @@ function ItemList(){
 
     }, [])
 
-    // Como podria hacerlo con un operador ternario? Gracias ^^
-    
-    if(loading){
-        return(
-        <div className="container">
-           CARGANDO....
-        </div>    
-        )
-    }
     return(
-    <div className="container">
-        <Item/>
-    </div>
-    )
+        <div className="container">
+            <div className="row justify-content-between">
+                {
+                    loading ? (<div className="col-auto">CARGANDO....</div>) : (productos.map((productos)=> <Item key={productos.id} producto={productos}/>))
+                }
+            </div>
+        </div>
+   )
 }
 
 export default ItemList
