@@ -3,9 +3,23 @@
 function ItemListCointainer({titulo}){
 
 
+// resultado
+//     .then((resultado)=>{
+//         const productos = resultado.json()
+//         return productos
+//     })
+//     .then((productos)=>{
+//         console.log(productos)
+//     })
+
+//     .catch((error)=>{
+//         console.log(error)
+//     })
+//     .finally(()=>{
+//         console.log('termino todo el pedido')
+//     })
+
     const{nombre, precio} = titulo
-
-
     
     return(
         <div>
@@ -13,8 +27,6 @@ function ItemListCointainer({titulo}){
                 <p>{precio}</p>
             </h3>
         </div>
-
-        
     )
 }
 
