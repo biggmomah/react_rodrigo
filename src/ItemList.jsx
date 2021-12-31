@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import Item from './Item'
 
 
-
 const productosIniciales=[
     {id: 1 , nombre: 'producto 1', stock: 5},
     {id: 2 , nombre: 'producto 2', stock: 5},
@@ -46,11 +45,26 @@ function ItemList(){
 
     }, [])
 
+    const [personajes, setPersonajes] = useState([])
+
+    const initialUrl='https://rickandmortyapi.com/api/character'
+
+    const fetchCharacter= (initialUrl)=>{
+        fetch(initialUrl)
+            .then(response=>response.json())
+            .then(data=>setPersonajes(data.results))
+            .catch(error=>console.log(error))
+    }
+
+    useEffect(()=>{
+        fetchCharacter(initialUrl)
+    },[])
+
     return(
         <div className="container">
             <div className="row justify-content-between">
                 {
-                    loading ? (<div className="container">CARGANDO....</div>) : (productos.map((producto)=> <Item key={productos.id} producto={producto}/>))
+                    loading ? (<div className="container">CARGANDO....</div>) : (personajes.map((personajes )=>(<Item personaje={personajes} /> ) ))
                 }
             </div>
         </div>

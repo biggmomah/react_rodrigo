@@ -1,19 +1,25 @@
+import React from "react"
 
-function Item({producto}){
-
-   const {id, nombre, stock} = producto
-    
+function Item({personajes}){  
     return(
-    <div className='col'>
-       <div className="card cardStyle" style={{width:'18rem'}}>
-            <img src="/img/123.jpg" className="card-img-top" alt="..."/>
-            <div className="card-body">
-                <h3>Nombre:{nombre}</h3>
-                <p className="card-text text-center">ID: {id}</p>
-                <p>Cantidad: {stock}</p>
-            
-            </div>
-        </div>
+        <div className="row">
+        {
+            personajes.map((item, index)=>(
+                <div key={index} className="col">
+                    <div className="card">
+                        <img src={item.image} alt="" />
+                        <div className="card-body">
+                            <h5 className="card-title">
+                                {item.name}
+                            </h5>
+                            <p>{item.species}</p>
+                        </div>
+                    </div>
+                </div>
+                
+            ))
+        }
+       
     </div>
     
     )

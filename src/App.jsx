@@ -14,20 +14,7 @@ function App(){
         precio: 1
     }
 
-    const [personajes, setPersonajes] = useState([])
-
-    const initialUrl='https://rickandmortyapi.com/api/character'
-
-    const fetchCharacter= (initialUrl)=>{
-        fetch(initialUrl)
-            .then(response=>response.json())
-            .then(data=>setPersonajes(data.results))
-            .catch(error=>console.log(error))
-    }
-
-    useEffect(()=>{
-        fetchCharacter(initialUrl)
-    },[])
+   
 
     return (
     <>
@@ -35,9 +22,7 @@ function App(){
      <ItemListContainer titulo={dato}/>
      <ItemCount stock={5} initial={1} />
      <ItemList/>
-     <div className="container">
-        <Personajes personajes={personajes}/>
-     </div>
+     
     </>
     )
 }
