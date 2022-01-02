@@ -46,15 +46,13 @@ function ItemList(){
     
     const [personajes, setPersonajes] = useState([])
     const [loading, setLoading]=useState(true)
-    const id= 2
 
     // const initialUrl='https://rickandmortyapi.com/api/character'
 
     useEffect(()=>{
-        fetch(`https://rickandmortyapi.com/api/character/${id}`)
+        fetch('https://rickandmortyapi.com/api/character/')
             .then((response)=>response.json())
             .then((data)=>{
-               
                 setLoading(false)
                 setPersonajes(data.results)
             })
@@ -69,7 +67,7 @@ function ItemList(){
                     ? 
                     (<div className="container">CARGANDO....</div>)
                     :
-                    <div style={{display:'flex', flexWrap:'wrap'}}><Item key={id} personaje={personajes}/></div>                
+                    <div style={{display:'flex', flexWrap:'wrap'}}>{personajes.map((personajes)=> <Item key={personajes.id} personaje={personajes} />)}</div>                
                 }
             </div>
         </div>

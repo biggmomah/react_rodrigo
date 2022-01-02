@@ -5,16 +5,17 @@ function ItemDetailCointaner(){
 
     const [personajes, setPersonajes] = useState([])
     const [loading, setLoading]=useState(true)
-
+    const id = 3
 
     useEffect(()=>{
-        fetch(`https://rickandmortyapi.com/api/character`)
+        const url = `https://rickandmortyapi.com/api/character/${id}`
+        fetch(url)
             .then((response)=>response.json())
             .then((data)=>{
                 setLoading(false)
-                setPersonajes(data.results)
+                setPersonajes(data)
             })
-            .catch(error=>console.log(error))
+            .catch(error=>console.log(error));
         },[])
     
 
@@ -26,7 +27,9 @@ function ItemDetailCointaner(){
                     ? 
                     (<div className="container">CARGANDO....</div>)
                     :
-                    <div style={{display:'flex', flexWrap:'wrap'}}>{personajes.map((personajes)=> <ItemDetail key={personajes.id} personaje={personajes} />)}</div>                
+                    <div style={{display:'flex', flexWrap:'wrap'}}>
+                        <ItemDetail personaje={personajes} />
+                    </div>                
                 }
             </div>
         </div>
