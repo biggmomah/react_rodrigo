@@ -1,9 +1,8 @@
-import { useState,useEffect } from 'react'
 import Navbar from './Navbar'
 import ItemListContainer from './ItemListContainer'
 import ItemCount from './ItemCount'
 import ItemList from './ItemList'
-import Personajes from './Personajes'
+
 
 
 
@@ -13,8 +12,6 @@ function App(){
         nombre: "PRODUCTO 1",
         precio: 1
     }
-
-   
 
     return (
     <>

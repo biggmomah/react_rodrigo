@@ -1,6 +1,6 @@
+import React from "react"
 
-function Item({personaje}){  
-    
+function ItemDetail(personaje){
     const {name, species, image} = personaje
     return(
         <div className="card" style={{width:'10%'}}>
@@ -13,4 +13,4 @@ function Item({personaje}){
     )
 }
 
-export default Item
+export default ItemDetail
