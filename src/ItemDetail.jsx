@@ -1,4 +1,5 @@
 import React from "react"
+import ItemCount from "./ItemCount"
 
 function ItemDetail({personaje}){
     const {name, species, image, gender } = personaje
@@ -9,6 +10,7 @@ function ItemDetail({personaje}){
                 <h5 className="card-tittle">{name}</h5>
                 <p>{species}</p>
                 <p>{gender}</p>
+                <ItemCount initial={1} stock={100}/>
             </div>
         </div>
     )

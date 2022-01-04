@@ -3,9 +3,9 @@ import ItemDetail from "./ItemDetail"
 
 function ItemDetailCointaner(){
 
-    const [personajes, setPersonajes] = useState([])
+    const [personajes, setPersonajes] = useState({})
     const [loading, setLoading]=useState(true)
-    const id = 3
+    const id = 9
 
     useEffect(()=>{
         const url = `https://rickandmortyapi.com/api/character/${id}`

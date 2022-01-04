@@ -60,17 +60,23 @@ function ItemList(){
         },[])
     
     return(
+
         <div className="container">
             <div className="row justify-content-between">
-                {
-                    loading
-                    ? 
-                    (<div className="container">CARGANDO....</div>)
-                    :
-                    <div style={{display:'flex', flexWrap:'wrap'}}>{personajes.map((personajes)=> <Item key={personajes.id} personaje={personajes} />)}</div>                
-                }
+            {
+                loading
+                ? 
+                (<div className="container">CARGANDO....</div>)
+                :
+                <div style={{display:'flex', flexWrap:'wrap'}}>{personajes.map((personajes)=> <Item key={personajes.id} personaje={personajes} />)}</div>                
+            } 
+
+               {/*  {personajes.map(personaje => {
+                    return <Item key={personajes.id} personaje={personaje}/>
+                })} */}
             </div>
         </div>
+
    )
 }
 

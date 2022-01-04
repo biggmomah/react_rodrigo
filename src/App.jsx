@@ -3,8 +3,8 @@ import ItemListContainer from './ItemListContainer'
 import ItemCount from './ItemCount'
 import ItemList from './ItemList'
 import ItemDetailCointaner from './ItemDetailCointainer'
-
-
+import {BrowserRouter} from 'react-router-dom'
+ 
 
 function App(){
 
@@ -14,10 +14,13 @@ function App(){
     }
 
     return (
-    <>
+
+    <BrowserRouter>
      <Navbar/>
      <ItemDetailCointaner/>
-    </>
+     <ItemList/>
+    </BrowserRouter>
+
     )
 }
 
