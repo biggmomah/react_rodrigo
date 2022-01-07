@@ -9,7 +9,7 @@ import Item from './Item'
 //     {id: 4 , nombre: 'producto 4', stock: 5}
 // ]
 
-function ItemList(){
+function ItemList({personajes}){
     /* useEffect(()=>{
         console.log('soy un efecto')
         
@@ -44,7 +44,7 @@ function ItemList(){
         
     }, []) */
     
-    const [personajes, setPersonajes] = useState([])
+/*     const [personajes, setPersonajes] = useState([])
     const [loading, setLoading]=useState(true)
 
     // const initialUrl='https://rickandmortyapi.com/api/character'
@@ -58,22 +58,14 @@ function ItemList(){
             })
             .catch(error=>console.log(error))
         },[])
-    
+     */
     return(
 
         <div className="container">
             <div className="row justify-content-between">
-            {
-                loading
-                ? 
-                (<div className="container">CARGANDO....</div>)
-                :
-                <div style={{display:'flex', flexWrap:'wrap'}}>{personajes.map((personajes)=> <Item key={personajes.id} personaje={personajes} />)}</div>                
-            } 
-
-               {/*  {personajes.map(personaje => {
-                    return <Item key={personajes.id} personaje={personaje}/>
-                })} */}
+                {personajes.map((personaje)=>
+                <Item  personaje={personaje} />)
+                }   
             </div>
         </div>
 

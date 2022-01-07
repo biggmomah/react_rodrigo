@@ -6,7 +6,7 @@ function Navbar(){
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
 
-            <Link to="foo" className="navbar-brand">
+            <Link to="/" className="navbar-brand">
                 <img src="/img/logo.png" alt="" width='100' height='80' className="d-inline-block align-text-middle"/>
                 Proyecto E-commerce
             </Link>
@@ -14,19 +14,19 @@ function Navbar(){
             <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="nav navbar-nav justify-content-evenly w-100">
                     <li className="nav-item">
-                        <Link to="foo" className="nav-link">Noticias</Link>
+                        <Link to="noticias" className="nav-link">Noticias</Link>
                     </li>
 
                     <li className="nav-item">
-                        <Link to="foo" className="nav-link">Conocenos</Link>
+                        <Link to="conocenos" className="nav-link">Conocenos</Link>
                     </li>
 
                     <li className="nav-item">
-                        <Link to="foo" className="nav-link">Productos</Link>
+                        <Link to="productos" className="nav-link">Productos</Link>
                     </li>
 
                     <li className='nav-item'>
-                        <Link to="foo">
+                        <Link to="carrito">
                             <CartWidget/>
                         </Link>
                     </li>

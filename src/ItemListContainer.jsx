@@ -1,8 +1,7 @@
 // Los hooks ('useState') no pueden incluirse en condiconales, el primer valor si no es asignado se toma como undefined,
 import {useEffect,useState} from 'react'
-import { useParams } from 'react-router-dom'
-import Item from './Item'
 import ItemList from './ItemList'
+import {useParams} from "react-router-dom";
 
 function ItemListCointainer(){
 
@@ -25,13 +24,8 @@ function ItemListCointainer(){
 
     const [personajes, setPersonajes] = useState([])
     const [loading, setLoading]=useState(true)
-    const {id} = useParams();
-
-    if(id){
-        console.log('personaje' + id)
-    }else{
-        console.log('todos los personajes')
-    }
+    const resultado = useParams()
+    console.log(resultado)
 
 // const initialUrl='https://rickandmortyapi.com/api/character'
 
@@ -43,7 +37,7 @@ function ItemListCointainer(){
                 setPersonajes(data.results)
             })
             .catch(error=>console.log(error))
-        },[id])
+        },[])
 
     return(
         <div className="container">
@@ -53,7 +47,7 @@ function ItemListCointainer(){
                     ? 
                     (<div className="container">CARGANDO....</div>)
                     :
-                    <div style={{display:'flex', flexWrap:'wrap'}}> <ItemList personajes={personajes}/> </div>                
+                    <ItemList personajes={personajes}/>             
                 }
             </div>
         </div>
