@@ -22,6 +22,11 @@ const ItemCount= ({ stock , initial , onAdd }) => {
         console.log('reiniciado')
     }
 
+    const ConfirmarCantidad = () =>{
+        console.log(`Confirmando cantidad: ${contador}`)
+        onAdd(contador)
+    } 
+
      /* // Promise completado sincronico
     const task = new Promise ((resolve, reject) =>{
         resolve(true)
@@ -61,6 +66,8 @@ const ItemCount= ({ stock , initial , onAdd }) => {
             <button type="button" onClick={aumentarContador} className="btn btn-outline-primary btn-sm">Agregar</button>
             <button type="button" onClick={disminuirContador} className="btn btn-outline-secondary btn-sm">Restar</button>
             <button type="button" onClick={resetearContador} className="btn btn-danger btn-sm">Reiniciar</button>
+            <button type="button" onClick={ConfirmarCantidad} className="btn btn-danger btn-sm">Confirmar cantidad</button>
+
             <p>Contador actual: {contador}</p>
         </div>
     )

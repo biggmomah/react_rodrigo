@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react'
 import Item from './Item'
 
 
@@ -64,7 +63,7 @@ function ItemList({personajes}){
         <div className="container">
             <div className="row justify-content-between">
                 {personajes.map((personaje)=>
-                <Item  personaje={personaje} />)
+                <Item key={personaje.id} personaje={personaje} />)
                 }   
             </div>
         </div>

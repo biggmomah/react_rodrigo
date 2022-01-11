@@ -9,7 +9,6 @@ function App(){
 
     <BrowserRouter>
         <Navbar/>
-        <ItemDetailCointaner/>
         <Main/>
     </BrowserRouter>
 
