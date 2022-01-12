@@ -8,9 +8,9 @@ function ItemDetailCointaner(){
     const [personajes, setPersonajes] = useState({})
     const [loading, setLoading]=useState(true)
     const {id} = useParams()
+    const url = `https://rickandmortyapi.com/api/character/${id}`
 
     useEffect(()=>{
-        const url = `https://rickandmortyapi.com/api/character/${id}`
         fetch(url)
             .then((response)=>response.json())
             .then((data)=>{

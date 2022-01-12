@@ -1,6 +1,5 @@
 import Navbar from './Navbar'
 import Main from './Main'
-import ItemDetailCointaner from './ItemDetailCointainer'
 import {BrowserRouter} from 'react-router-dom'
  
 

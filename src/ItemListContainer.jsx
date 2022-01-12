@@ -23,23 +23,23 @@ function ItemListCointainer(){
 //     .finally(()=>{
 //         console.log('termino todo el pedido')
 //     })
+    const {id} = useParams();
+    const url = !id ? 'https://rickandmortyapi.com/api/character/' : 'https://rickandmortyapi.com/api/character/?gender='+id
 
     const [personajes, setPersonajes] = useState([])
     const [loading, setLoading]=useState(true)
-    const resultado = useParams()
-    console.log(resultado)
 
 // const initialUrl='https://rickandmortyapi.com/api/character'
 
     useEffect(()=>{
-        fetch('https://rickandmortyapi.com/api/character/')
+        fetch(url)
             .then((response)=>response.json())
             .then((data)=>{
                 setLoading(false)
                 setPersonajes(data.results)
             })
             .catch(error=>console.log(error))
-        },[])
+        },[id])
 
     return(
         <div className="container">

@@ -14,11 +14,11 @@ function Navbar(){
             <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="nav navbar-nav justify-content-evenly w-100">
                     <li className="nav-item">
-                        <Link to="noticias" className="nav-link">Noticias</Link>
+                        <Link to="/category/female" className="nav-link">Female</Link>
                     </li>
 
                     <li className="nav-item">
-                        <Link to="conocenos" className="nav-link">Conocenos</Link>
+                        <Link to="/category/male" className="nav-link">Male</Link>
                     </li>
 
                     <li className="nav-item">
