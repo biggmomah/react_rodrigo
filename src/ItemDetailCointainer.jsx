@@ -6,31 +6,41 @@ import Loading from "./Loading"
 function ItemDetailCointaner(){
 
     const [personajes, setPersonajes] = useState({})
-    const [loading, setLoading]=useState(true)
+    const [loading, setLoading]=useState(false)
     const {id} = useParams()
-    const url = `https://rickandmortyapi.com/api/character/${id}`
-
+    
     useEffect(()=>{
+        const url = `https://rickandmortyapi.com/api/character/${id}`
         fetch(url)
             .then((response)=>response.json())
             .then((data)=>{
-                setLoading(false)
+                setLoading(true)
                 setPersonajes(data)
             })
             .catch(error=>console.log(error));
+
+            return()=>{
+                setLoading(true)
+            }
+            
         },[id])
     
 
-    return(
-        <div className="container">
-            <div className="row justify-content-between">
+    if(!loading){
+        return(
+            <Loading/>
+        )
+    }else{
+        return(
+            <div className="container">
+                <div className="row justify-content-between">
                     <div style={{display:'flex', flexWrap:'wrap'}}>
-                        <ItemDetail personaje={personajes} />
-                    </div>                
-
+                        <ItemDetail personaje={personajes}/>
+                    </div>
+                </div>
             </div>
-        </div>
-    )
+        )
+    }
 }
 
 export default ItemDetailCointaner
