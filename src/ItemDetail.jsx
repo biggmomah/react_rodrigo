@@ -1,11 +1,15 @@
 import React from "react"
 import ItemCount from "./ItemCount"
-
+import { useContext } from "react";
+import {context} from './Context'
+ 
 function ItemDetail({personaje}){
     const {name, species, image, gender } = personaje
+
+    const {agregarProducto} = useContext(context)
     
     const onAdd = (cantidad) =>{
-        console.log(cantidad)
+        agregarProducto(personaje,cantidad)
     }
 
     return(

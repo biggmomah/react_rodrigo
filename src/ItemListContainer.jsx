@@ -7,22 +7,6 @@ import Loading from './Loading';
 
 function ItemListCointainer(){
 
-
-// resultado
-//     .then((resultado)=>{
-//         const productos = resultado.json()
-//         return productos
-//     })
-//     .then((productos)=>{
-//         console.log(productos)
-//     })
-
-//     .catch((error)=>{
-//         console.log(error)
-//     })
-//     .finally(()=>{
-//         console.log('termino todo el pedido')
-//     })
     const {id} = useParams();
     const url = !id ? 'https://rickandmortyapi.com/api/character/' : 'https://rickandmortyapi.com/api/character/?gender='+id
 
