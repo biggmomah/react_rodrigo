@@ -18,18 +18,7 @@ const CartProvider = ({children}) =>{
         setCartArray([...carArray, newObj])
     }
 
-    const deleteItem = (id) => {
-        const updatedCart = carArray.filter(element = element.id !== id)
-        setCartArray(updatedCart)
-    }
-
-    const clearCart = () => {
-        setCartArray([])
-    }
-
-    const isInCart= () => {
-
-    }
+ 
 
 
     const value = {
