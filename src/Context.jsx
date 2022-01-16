@@ -1,9 +1,7 @@
 import { createContext, useState } from 'react'
 
 
-export const context= createContext({
-    
-});
+export const context= createContext();
 
 const {Provider} = context
 
@@ -13,34 +11,34 @@ const CarritoProvider = ({children}) =>{
     const[cantidad, setCantidad]=useState(0)
     const[precio_total,setPrecio_total]=useState(0)
 
+    
+    
+    const agregarProducto = (personajes) => {
+        console.log(personajes, cantidad)
+    }
+    
+    const eliminarProducto= (id) => {
+        
+    }
+    
+    const editarProducto = (id, cantidad) => {
+        
+    }
+    
+    const limpiarCarrito = () => {
+        
+    }
+    
+    const isInCart = () => {
+        
+    }
+    
     const valorContexto = {
         carrito, 
         precio_total, 
         cantidad, 
         agregarProducto
     }
-    
-
-    const agregarProducto = (personajes) => {
-        console.log(personajes)
-    }
-
-    const eliminarProducto= (id) => {
-
-    }
-
-    const editarProducto = (id, cantidad) => {
-
-    }
-
-    const limpiarCarrito = () => {
-
-    }
-
-    const isInCart = () => {
-
-    }
-    
     return(
         <Provider value={valorContexto}>
             {children}

@@ -27,6 +27,8 @@ const ItemCount= ({ stock , initial , onAdd }) => {
         onAdd(contador)
     } 
 
+
+    
      /* // Promise completado sincronico
     const task = new Promise ((resolve, reject) =>{
         resolve(true)
