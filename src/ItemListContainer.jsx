@@ -1,5 +1,5 @@
 // Los hooks ('useState') no pueden incluirse en condiconales, el primer valor si no es asignado se toma como undefined,
-import {useEffect,useState} from 'react'
+import {useContext, useEffect,useState} from 'react'
 import {useParams} from "react-router-dom";
 import ItemList from './ItemList'
 import Loading from './Loading';
@@ -24,6 +24,7 @@ function ItemListCointainer(){
             })
             .catch(error=>console.log(error))
         },[id])
+
 
     return(
         <div className="container">

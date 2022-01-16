@@ -1,21 +1,21 @@
 import Navbar from './Navbar'
 import Main from './Main'
 import {BrowserRouter} from 'react-router-dom'
-import CarritoProvider from './Context'
+import CartProvider from './Context'
 
 
 
 function App(){
  
     return (
-    <CarritoProvider>
+    <CartProvider>
 
         <BrowserRouter>
             <Navbar/>
             <Main/>
         </BrowserRouter>
 
-    </CarritoProvider>
+    </CartProvider>
 
     )
 }

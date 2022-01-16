@@ -1,11 +1,9 @@
 import CartWidget from './CartWidget'
 import {Link} from 'react-router-dom'
-import { useContext } from 'react'
-import {context} from './Context';
 
 function Navbar(){
 
-    const {cantidad}= useContext(context)
+    // const {cantidad}= useContext(context)
  
 
     return(
@@ -35,7 +33,7 @@ function Navbar(){
                     <li className='nav-item'>
                         <Link to="/carrito">
                             <CartWidget/>
-                            {cantidad}
+                            {/* {cantidad} */}
                         </Link>
                     </li>
 

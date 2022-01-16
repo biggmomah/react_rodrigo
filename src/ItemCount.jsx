@@ -8,13 +8,13 @@ const ItemCount= ({ stock , initial , onAdd }) => {
     const aumentarContador=()=>{
         if ( contador <= stock){
             setContador(contador +1)
-        }console.log('excediste cantidad stock')
+        }console.log('+1')
     }
 
     const disminuirContador=()=>{   
         if(contador > initial){
             setContador(contador -1)
-        }console.log('no es posible seguir restando unidades')
+        }console.log('-1')
     }
 
     const resetearContador=()=>{

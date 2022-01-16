@@ -1,51 +1,50 @@
-import { createContext, useState } from 'react'
+import React, {createContext, useState} from 'react'
 
 
-export const context= createContext();
+export const CartContext = createContext()
 
-const {Provider} = context
+const CartProvider = ({children}) =>{
 
-const CarritoProvider = ({children}) =>{
-
-    const[carrito, setCarrito]= useState([])
-    const[cantidad, setCantidad]=useState(0)
-    const[precio_total,setPrecio_total]=useState(0)
-
+    const[carArray, setCartArray] = useState([])
     
     
-    const agregarProducto = (personajes) => {
-        console.log(personajes, cantidad)
-    }
-    
-    const eliminarProducto= (id) => {
+    const addToCart = (name, cantidad) => {
+        console.log(`agregaste a ${name}, cantidad ${cantidad}`)
+        const newObj = {
+            item: name,
+            cantidad
+        }
         
+        setCartArray([...carArray, newObj])
     }
-    
-    const editarProducto = (id, cantidad) => {
-        
+
+    const deleteItem = (id) => {
+        const updatedCart = carArray.filter(element = element.id !== id)
+        setCartArray(updatedCart)
     }
-    
-    const limpiarCarrito = () => {
-        
+
+    const clearCart = () => {
+        setCartArray([])
     }
-    
-    const isInCart = () => {
-        
+
+    const isInCart= () => {
+
     }
-    
-    const valorContexto = {
-        carrito, 
-        precio_total, 
-        cantidad, 
-        agregarProducto
+
+
+    const value = {
+        carArray,
+        addToCart
+
     }
+
     return(
-        <Provider value={valorContexto}>
+        <CartContext.Provider value={value}>  
             {children}
-        </Provider>
+        </CartContext.Provider>
     )
 }
 
-export default CarritoProvider
+export default CartProvider
 
 
