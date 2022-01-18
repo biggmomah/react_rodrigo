@@ -4,7 +4,7 @@ import { useContext } from "react";
 import {CartContext} from './Context'
  
 function ItemDetail({personaje}){
-    const {name, species, image, gender } = personaje
+    const {name, species, image, gender, id } = personaje
     const { addToCart } = useContext(CartContext)
 
 
@@ -12,7 +12,7 @@ function ItemDetail({personaje}){
     
     const onAdd = (cantidad) =>{
         // console.log(`agregaste ${name}, cantidad ${cantidad}`)
-        addToCart(name, cantidad)
+        addToCart(id, name, cantidad)
     }
 
     return(

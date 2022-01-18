@@ -1,5 +1,6 @@
 import ItemListCointainer from "./ItemListContainer";
 import ItemDetailCointaner from "./ItemDetailCointainer";
+import Cart from "./Cart";
 import {Routes, Route} from 'react-router-dom'
 import CartWidget from "./CartWidget";
 
@@ -10,7 +11,7 @@ function Main(){
                 <Route path='/' element={<ItemListCointainer/>}/>
                 <Route path='/category/:id' element={<ItemListCointainer/>}/>
                 <Route path='/personaje/:id' element={<ItemDetailCointaner/>}/>
-                <Route path='/carrito' element={<CartWidget/>}/>
+                <Route path='/cart' element={<Cart/>}/>
             </Routes>
 
         </main>

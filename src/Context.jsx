@@ -3,28 +3,37 @@ import React, {createContext, useState} from 'react'
 
 export const CartContext = createContext()
 
+
 const CartProvider = ({children}) =>{
 
     const[carArray, setCartArray] = useState([])
     
     
-    const addToCart = (name, cantidad) => {
-        console.log(`agregaste a ${name}, cantidad ${cantidad}`)
-        const newObj = {
-            item: name,
-            cantidad
+    const addToCart = (id, name, cantidad) => {
+        const index = carArray.findIndex((i) => i.id == id)
+        if (index > -1){
+            return console.log('Este producto ya ha sido agregado')
+        }else{
+            return setCartArray([...carArray, { id, name, cantidad}])
         }
-        
-        setCartArray([...carArray, newObj])
+    }
+    console.log(carArray)
+    
+    const removeItem = (id) => {
+        const items = carArray.filter( (i) => i.id != id )
+        setCartArray(items)
     }
 
- 
+    const clearCart = () => {
+        setCartArray([])
+    }
 
 
     const value = {
         carArray,
-        addToCart
-
+        addToCart,
+        clearCart,
+        removeItem
     }
 
     return(
