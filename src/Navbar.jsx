@@ -31,7 +31,7 @@ function Navbar(){
                     </li>
 
                     <li className='nav-item'>
-                        <Link to="/carrito">
+                        <Link to="/cart">
                             <CartWidget/>
                             {/* {cantidad} */}
                         </Link>

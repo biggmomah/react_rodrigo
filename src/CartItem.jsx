@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { CartContext } from './Context'
 
-const CartItem = () => {
+const CartItem = ({personaje, contador}) => {
 
     const {name, image, id } = personaje
     const {removeItem} = useContext(CartContext)

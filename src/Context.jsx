@@ -9,18 +9,18 @@ const CartProvider = ({children}) =>{
     const[carArray, setCartArray] = useState([])
     
     
-    const addToCart = (id, name, cantidad) => {
-        const index = carArray.findIndex((i) => i.id == id)
+    const addToCart = (personaje, cantidad) => {
+        const index = carArray.findIndex((i) => i.personaje.id == personaje.id)
         if (index > -1){
             return console.log('Este producto ya ha sido agregado')
         }else{
-            return setCartArray([...carArray, { id, name, cantidad}])
+            return setCartArray([...carArray, {personaje, cantidad}])
         }
     }
     console.log(carArray)
     
     const removeItem = (id) => {
-        const items = carArray.filter( (i) => i.id != id )
+        const items = carArray.filter( (i) => i.personaje.id =! id )
         setCartArray(items)
     }
 

@@ -3,14 +3,14 @@ import Item from './Item'
 
 
 
-function ItemList({personajes}){
+function ItemList({productos}){
 
     return(
 
         <div className="container">
             <div className="row justify-content-between">
-                {personajes.map((personaje)=>
-                <Item key={personaje.id} personaje={personaje} />)
+                {productos.map((producto)=>
+                <Item key={producto.id} producto={producto} />)
                 }   
             </div>
         </div>
