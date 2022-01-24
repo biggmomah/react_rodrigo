@@ -4,25 +4,29 @@ import {useParams} from "react-router-dom";
 import ItemList from './ItemList'
 import Loading from './Loading';
 import {db} from './firebase'
-import {collection, getDocs} from 'firebase/firestore'
+import {collection, getDocs, query, where} from 'firebase/firestore'
 
 function ItemListCointainer(){
 
-    const coleccionProductos = collection(db, 'productos')
-
+    
     const {id} = useParams();
     const url = !id ? 'https://rickandmortyapi.com/api/character/' : 'https://rickandmortyapi.com/api/character/?gender='+id
-
+    
     const [personajes, setPersonajes] = useState([])
     const [loading, setLoading]=useState(true)
     const [productos, setProductos]= useState([])
-
-// const initialUrl='https://rickandmortyapi.com/api/character'
-
     
-
+    // const initialUrl='https://rickandmortyapi.com/api/character'
+    
+    
+    
     useEffect(()=>{
-        const pedido = getDocs(coleccionProductos)
+        const coleccionProductos = collection(db, 'productos')
+        
+        const filtro = where("categoria", "==", id)
+        console.log(filtro)
+        const consulta = query(coleccionProductos, filtro)
+        const pedido = getDocs(consulta)
         console.log(pedido)
 
         pedido
@@ -32,9 +36,7 @@ function ItemListCointainer(){
                     const producto ={
                         id: doc.id,
                         ...doc.data()
-                    }
-                   return(producto)
-                })
+                    }                })
                 setProductos(docs_reset)
                 setLoading(false)
             })

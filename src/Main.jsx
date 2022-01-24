@@ -9,7 +9,7 @@ function Main(){
         <main>
             <Routes>
                 <Route path='/' element={<ItemListCointainer/>}/>
-                <Route path='/category/:id' element={<ItemListCointainer/>}/>
+                <Route path='/categoria/:id' element={<ItemListCointainer/>}/>
                 <Route path='/personaje/:id' element={<ItemDetailCointaner/>}/>
                 <Route path='/cart' element={<Cart/>}/>
             </Routes>
