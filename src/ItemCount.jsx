@@ -1,4 +1,5 @@
 import {useEffect, useState} from 'react';
+import Row from 'react-bootstrap/Row';
 
 const ItemCount= ({ stock , initial , onAdd }) => {
 
@@ -30,14 +31,13 @@ const ItemCount= ({ stock , initial , onAdd }) => {
 
 
     return(
-        <div>
-            <button type="button" onClick={aumentarContador} className="btn btn-outline-primary btn-sm">Agregar</button>
-            <button type="button" onClick={disminuirContador} className="btn btn-outline-secondary btn-sm">Restar</button>
-            <button type="button" onClick={resetearContador} className="btn btn-danger btn-sm">Reiniciar</button>
+        <Row>
+            <button type="button" onClick={aumentarContador} className="btn btn-outline-primary btn-sm text-center">Agregar</button>
+            <button type="button" onClick={disminuirContador} className="btn btn-outline-secondary btn-sm text-center">Restar</button>
+            <button type="button" onClick={resetearContador} className="btn btn-danger btn-sm text-center">Reiniciar</button>
           
-
             <p>Contador actual: {contador}</p>
-        </div>
+        </Row>
     )
 }
 

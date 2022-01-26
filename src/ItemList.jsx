@@ -1,3 +1,4 @@
+import Row from 'react-bootstrap/Row'
 import Item from './Item'
 
 
@@ -6,15 +7,13 @@ import Item from './Item'
 function ItemList({productos}){
 
     return(
-
-        <div className="container">
-            <div className="row justify-content-between">
-                {productos.map((producto)=>
-                <Item key={producto.id} producto={producto} />)
-                }   
-            </div>
-        </div>
-
+   
+        <Row>
+            {productos.map((producto)=>
+            <Item key={producto.id} producto={producto} />)
+            }
+        </Row>
+     
    )
 }
 

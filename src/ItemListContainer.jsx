@@ -4,6 +4,9 @@ import ItemList from './ItemList'
 import Loading from './Loading';
 import {db} from './firebase'
 import {collection, getDocs, query, where} from 'firebase/firestore'
+import Container from "react-bootstrap/Container"
+import Row from "react-bootstrap/Row"
+import Col from "react-bootstrap/Col"
 
 function ItemListCointainer(){
 
@@ -11,7 +14,6 @@ function ItemListCointainer(){
     const {id} = useParams();
 
     
-    const [personajes, setPersonajes] = useState([])
     const [loading, setLoading]=useState(true)
     const [productos, setProductos]= useState([])
     
@@ -60,8 +62,7 @@ function ItemListCointainer(){
 
 
     return(
-        <div className="container">
-            <div className="row justify-content-between">
+        <Container className='d-flex justify-content-center'>
                 {
                     loading
                     ? 
@@ -69,9 +70,9 @@ function ItemListCointainer(){
                     :
                     <ItemList productos={productos}/>             
                 }
-            </div>
-        </div>
+        </Container>
 )
 }
 
 export default ItemListCointainer
+

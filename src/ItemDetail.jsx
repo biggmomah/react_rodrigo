@@ -2,6 +2,11 @@ import React from "react";
 import ItemCount from "./ItemCount";
 import { useContext, useState } from "react";
 import { CartContext } from "./Context";
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Image from 'react-bootstrap/Image'
 
 function ItemDetail({ producto, id }) {
   const { name, precio, imagen } = producto;
@@ -20,17 +25,20 @@ function ItemDetail({ producto, id }) {
   };
 
   return (
-    <div className="card" style={{ width: "10%" }}>
-      <img src={imagen} alt="" style={{ width: "80px", height: "80px" }} />
-      <div className="card-body">
-        <h5 className="card-tittle">{name}</h5>
-        <p>{precio}</p>
+    <Container>
+      <Row>
+    <Card>
+      <Image src={imagen} alt="" className="img-fluid" fluid/>
+      <div >
+        <Card.Title className="text-center">{name}</Card.Title>
+        <p className="text-center"> ${precio}</p>
         <ItemCount initial={1} stock={100} onAdd={onAdd} />
         <button onClick={() => addToCart(item)}>Confirmar</button>
-      </div>
-     
-    </div>
-
+        <Button variant="primary">Primary</Button>{' '}
+      </div>d
+    </Card>
+    </Row>
+    </Container>
   );
 }
 
