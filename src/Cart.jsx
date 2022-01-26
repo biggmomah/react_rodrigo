@@ -4,13 +4,14 @@ import CartItem from "./CartItem";
 
 const Cart = () => {
 
-    const{carArray, clearCart} = useContext(CartContext);
+    const{carArray, clearCart, priceTotal} = useContext(CartContext);
     const carritoVacio = carArray.lenght < 1;
 
     return(
         <div className="container">
-            { carritoVacio ? <h2>No hay productos agregados</h2> : carArray.map((item)=> (<CartItem key={item.personaje.id} personaje={item.personaje} contador={item.contador}/>))}
+            { carritoVacio ? <h2>No hay productos agregados</h2> : carArray.map((item)=> (<CartItem key={item.id} producto={item.producto} cantidad={item.cantidad} id={item.id}/>))}
             <button onClick={clearCart}>Vaciar carro</button>
+            <h4> Total = ${priceTotal()}</h4>
         </div>
     )
 }

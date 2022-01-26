@@ -1,4 +1,3 @@
-// Los hooks ('useState') no pueden incluirse en condiconales, el primer valor si no es asignado se toma como undefined,
 import {useContext, useEffect,useState} from 'react'
 import {useParams} from "react-router-dom";
 import ItemList from './ItemList'
@@ -10,7 +9,7 @@ function ItemListCointainer(){
 
     
     const {id} = useParams();
-    const url = !id ? 'https://rickandmortyapi.com/api/character/' : 'https://rickandmortyapi.com/api/character/?gender='+id
+
     
     const [personajes, setPersonajes] = useState([])
     const [loading, setLoading]=useState(true)
@@ -22,21 +21,27 @@ function ItemListCointainer(){
     
     useEffect(()=>{
         const coleccionProductos = collection(db, 'productos')
-        
-        const filtro = where("categoria", "==", id)
-        console.log(filtro)
-        const consulta = query(coleccionProductos, filtro)
-        const pedido = getDocs(consulta)
-        console.log(pedido)
+
+        const listaProductos =
+                  (id === "placas") ? query(coleccionProductos, where("categoria", "==", id))
+                : (id === "mineria") ? query(coleccionProductos, where("categoria", "==", id))
+                : coleccionProductos ;
+
+        const pedido = getDocs(listaProductos)
+     
 
         pedido
             .then((resultado) => {
-                const docs = resultado.docs
+                const docs = resultado.docs;
+
                 const docs_reset= docs.map(doc=>{
+
                     const producto ={
                         id: doc.id,
                         ...doc.data()
-                    }                })
+                    }    
+                    return producto            })
+                    
                 setProductos(docs_reset)
                 setLoading(false)
             })

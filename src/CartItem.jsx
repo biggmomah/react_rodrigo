@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import { CartContext } from './Context'
 
-const CartItem = ({personaje, contador}) => {
+const CartItem = ({producto, id, cantidad}) => {
 
-    const {name, image, id } = personaje
+    const {name, image} = producto
     const {removeItem} = useContext(CartContext)
 
     return(
@@ -12,7 +12,7 @@ const CartItem = ({personaje, contador}) => {
 
             <img style={{width:'60px', height:'60px'}} src={image}/>
 
-            <h4>{contador}</h4>
+            <h4>Cantidad: {cantidad}</h4>
 
             <button onClick={() =>removeItem(id) }> Borrar</button>
         </div>

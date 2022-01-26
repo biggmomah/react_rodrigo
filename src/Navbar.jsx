@@ -19,11 +19,11 @@ function Navbar(){
             <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="nav navbar-nav justify-content-evenly w-100">
                     <li className="nav-item">
-                        <Link to="/category/female" className="nav-link">Female</Link>
+                        <Link to="/categoria/mineria" className="nav-link">Mineria</Link>
                     </li>
 
                     <li className="nav-item">
-                        <Link to="/category/male" className="nav-link">Male</Link>
+                        <Link to="/categoria/placas" className="nav-link">Placas</Link>
                     </li>
 
                     <li className="nav-item">
@@ -33,7 +33,7 @@ function Navbar(){
                     <li className='nav-item'>
                         <Link to="/cart">
                             <CartWidget/>
-                            {/* {cantidad} */}
+                          
                         </Link>
                     </li>
 
