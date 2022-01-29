@@ -1,9 +1,6 @@
 import Row from 'react-bootstrap/Row'
 import Item from './Item'
 
-
-
-
 function ItemList({productos}){
 
     return(

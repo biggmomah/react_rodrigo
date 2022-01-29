@@ -27,13 +27,12 @@ function Navbar(){
                     </li>
 
                     <li className="nav-item">
-                        <Link to="productos" className="nav-link">Productos</Link>
+                        <Link to="categoria/billetera" className="nav-link">Billeteras</Link>
                     </li>
 
                     <li className='nav-item'>
                         <Link to="/cart">
                             <CartWidget/>
-                          
                         </Link>
                     </li>
 

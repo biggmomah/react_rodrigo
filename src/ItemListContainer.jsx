@@ -27,8 +27,8 @@ function ItemListCointainer(){
         const listaProductos =
                   (id === "placas") ? query(coleccionProductos, where("categoria", "==", id))
                 : (id === "mineria") ? query(coleccionProductos, where("categoria", "==", id))
+                : (id === "billetera") ? query(coleccionProductos, where("categoria", "==", id))
                 : coleccionProductos ;
-
         const pedido = getDocs(listaProductos)
      
 
