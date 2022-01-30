@@ -13,6 +13,7 @@ function Item({producto}){
             <Container style={{width:'200px', height:'200px'}}>
                 <img src={imagen} alt=""style={{ width: '100%' }} />
             </Container>
+            
             <Card.Body>
                 <Card.Title className="card-tittle text-center">{name}</Card.Title>
                 <p className="text-center">${precio}</p>

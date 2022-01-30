@@ -1,5 +1,5 @@
 import React, {createContext, useState} from 'react'
-
+import Swal from 'sweetalert2'
 
 export const CartContext = createContext()
 
@@ -18,10 +18,19 @@ const CartProvider = ({children}) =>{
         if (index > -1){
 
           console.log('Este producto ya ha sido agregado')
+          Swal.fire(
+            'Producto ya solicitado!',
+            'Ya agregaste este producto antes',
+            'success'
+          )
 
         }else{
-
             setCartArray([...carArray, item])
+            Swal.fire(
+                'Producto agregado!',
+                'Agregaste el producto al carrito',
+                'success'
+              )
         }}
 
     
@@ -32,6 +41,7 @@ const CartProvider = ({children}) =>{
 
     const clearCart = () => {
         setCartArray([])
+        Swal.fire('Productos elimiminados')
     }
 
     const priceTotal = () =>{

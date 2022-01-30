@@ -14,11 +14,10 @@ const CartItem = ({producto, id, cantidad}) => {
             <Row>
                 <Card>
                     <h4 className="text-center">{name}</h4>
-                    <Container style={{width:'500px', height:'300px'}}>
+                    <Container style={{width:'300px', height:'300px'}}>
                     <img src={imagen} style={{width: "100%"}}/>
                     </Container>
                     <h4 className="text-center">Cantidad: {cantidad}</h4>
-
                     <button onClick={() =>removeItem(id) } className="btn btn-outline-dark"> Borrar</button>
                 </Card>
             </Row>

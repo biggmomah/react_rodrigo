@@ -5,8 +5,7 @@ import Loading from './Loading';
 import {db} from './firebase'
 import {collection, getDocs, query, where} from 'firebase/firestore'
 import Container from "react-bootstrap/Container"
-import Row from "react-bootstrap/Row"
-import Col from "react-bootstrap/Col"
+
 
 function ItemListCointainer(){
 
@@ -29,6 +28,7 @@ function ItemListCointainer(){
                 : (id === "mineria") ? query(coleccionProductos, where("categoria", "==", id))
                 : (id === "billetera") ? query(coleccionProductos, where("categoria", "==", id))
                 : coleccionProductos ;
+
         const pedido = getDocs(listaProductos)
      
 
@@ -42,8 +42,9 @@ function ItemListCointainer(){
                         id: doc.id,
                         ...doc.data()
                     }    
-                    return producto            })
-                    
+                    return producto
+                })
+                     
                 setProductos(docs_reset)
                 setLoading(false)
             })

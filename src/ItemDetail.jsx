@@ -26,22 +26,19 @@ function ItemDetail({ producto, id }) {
   };
 
   return (
-    <Container>
-      <Row>
-        <Image src={imagen} alt="" className="img-fluid" fluid/>
+        <Container style={{width:'500px', height:'500px'}}> 
+          <Image src={imagen} alt="" style={{width: "100%"}}/>
           <Card>
             <Row className="justify-content-md-center">
               <Col md="auto"><Card.Title className="text-center">{name}</Card.Title>
               <p className="text-center"> ${precio}</p>
-              <ItemCount initial={1} stock={100} onAdd={onAdd} />
-              <button onClick={() => addToCart(item)} className=" text-center btn btn-outline-dark">Confirmar</button>
+              <ItemCount initial={1} producto={producto} onAdd={onAdd} />
+              <button onClick={() => addToCart(item)} className=" text-center btn btn-outline-dark" >Confirmar</button>
               </Col>
             </Row>
-          
           </Card>
-      </Row>
-    </Container>
+          </Container>
   );
 }
 
-export default ItemDetail;
+export default ItemDetail; 
