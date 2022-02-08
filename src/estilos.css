@@ -25,5 +25,8 @@
     border: 1px solid #e9e9ec;
     padding: 80px;
     box-shadow: 0 2px 5px 0 #a8a8a8;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
 }
 

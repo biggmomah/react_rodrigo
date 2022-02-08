@@ -11,18 +11,12 @@ const CartItem = ({producto, id, cantidad}) => {
     const {removeItem} = useContext(CartContext)
 
     return(
-        <Container>
-            <Row>
-                <Col xs={6} md={4}>  
                     <Card className="cardContainer">
                         <h4 className="text-center">{name}</h4>
                         <img src={imagen} className="imgCard"/>
                         <h4 className="text-center">Cantidad: {cantidad}</h4>
                         <button onClick={() =>removeItem(id) } className="btn btn-outline-dark"> Eliminar producto</button>
                     </Card>
-                </Col>
-            </Row>
-        </Container>
     )
 
 }
