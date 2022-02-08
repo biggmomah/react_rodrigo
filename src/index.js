@@ -6,7 +6,7 @@
 // 2) Tener a ReactDOM en scope
 import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './estilos.scss';
+import './estilos.css';
 // 3) Tener por lo menos un componente > creamos un nuevo js > App.js
 import App from './App';
 

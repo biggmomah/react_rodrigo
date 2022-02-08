@@ -4,6 +4,7 @@ import {collection, addDoc} from 'firebase/firestore'
 import {CartContext, clearCart} from './Context'
 import CartItem from "./CartItem";
 import Row from 'react-bootstrap/Row'
+import Col from "react-bootstrap/Col";
 import { useState } from "react";
 
 const Cart = () => {
@@ -38,13 +39,17 @@ const Cart = () => {
     }
 
     return(
-        <Row>
-            { carritoVacio ? <h2>No hay productos agregados</h2> : carArray.map((item)=> (<CartItem key={item.id} producto={item.producto} cantidad={item.cantidad} id={item.id}/>))}
-            <button onClick={clearCart} className="btn btn-danger mt-5">Vaciar carro</button>
-            <button onClick={crearOrden} className="btn btn-primary mt-5">Confirmar compra</button>
-            <h4> Total = ${priceTotal()}</h4>
-            {orden && <p> Orden: {orden} </p>}
-        </Row>
+        <>
+            { carritoVacio ? <h2>No hay productos agregados</h2> : carArray.map((item)=> (<CartItem key={item.id} producto={item.producto} cantidad={item.cantidad} id={item.id}/>))
+            }
+
+        <Col className="cartCompra">
+            <button onClick={clearCart} className="btn btn-danger">Vaciar carro</button>
+            <button onClick={crearOrden} className="btn btn-primary">Confirmar compra</button>
+            <h4 className="text-center"> Total = ${priceTotal()}</h4>
+            {orden && <p className="center"> Orden: {orden} </p>}
+        </Col>
+        </>
     )
 }
 

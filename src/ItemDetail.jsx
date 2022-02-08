@@ -33,7 +33,9 @@ function ItemDetail({ producto, id }) {
               <Col md="auto"><Card.Title className="text-center">{name}</Card.Title>
               <p className="text-center"> ${precio}</p>
               <ItemCount initial={1} producto={producto} onAdd={onAdd} />
+              <Row className="justify-content-md-center">
               <button onClick={() => addToCart(item)} className=" text-center btn btn-outline-dark" >Confirmar</button>
+              </Row>
               </Col>
             </Row>
           </Card>

@@ -8,10 +8,9 @@ function Item({producto}){
     const {name, precio, imagen, id} = producto
     return(
         <Col className='col-md-4'>
-        <Card>
-
+        <Card className="cardContainer">
             <Container style={{width:'200px', height:'200px'}}>
-                <img src={imagen} alt=""style={{ width: '100%' }} />
+                <img src={imagen} alt="" className="imgCard"/>
             </Container>
             
             <Card.Body>
