@@ -40,7 +40,7 @@ function Footer(){
                                 <FontAwesomeIcon icon={faTwitter} />
                                 </a>
 
-                                <a href="" className="text-reset">
+                                <a href="." className="text-reset">
                                 <FontAwesomeIcon icon={faTelegram} />
                                 </a>
 

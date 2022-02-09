@@ -26,8 +26,8 @@ function ItemDetail({ producto, id }) {
   };
 
   return (
-        <Container style={{width:'500px', height:'500px'}}> 
-          <Image src={imagen} alt="" style={{width: "100%"}}/>
+        <Container className="detailContainer"> 
+          <Image src={imagen} alt="" className="imgDetail"/>
           <Card>
             <Row className="justify-content-md-center">
               <Col md="auto"><Card.Title className="text-center">{name}</Card.Title>
