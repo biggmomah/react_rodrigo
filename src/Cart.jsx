@@ -47,9 +47,11 @@ const Cart = () => {
         
         <Col className="cartCompra">
             <button onClick={clearCart} className="btn btn-danger">Vaciar carro</button>
-            <button onClick={crearOrden} className="btn btn-primary">Confirmar compra</button>
+            
+            <button onClick={crearOrden} className="btn btn-dark">Confirmar compra</button>
+        
             <h4 className="text-center"> Total = ${priceTotal()}</h4>
-            {orden && <p className="center"> Orden: {orden} </p>}
+            {orden && <p className="center"> Muchas gracias por elegirnos, su numero de orden es: {orden} </p>}
         </Col>
         </>
     )

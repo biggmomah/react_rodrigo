@@ -4,7 +4,13 @@
     box-sizing: border-box;
 }
 
+.background{
+    background: rgba( 0, 0, 0, 0.5)
+}
 
+ul{
+    list-style: none;
+}
 .cardContainer{
     width: 450px;
     height: 450px;
@@ -20,13 +26,19 @@
 .cartCompra{
     display: flex;
     flex-direction: column;
+    text-overflow: clip;
     width: 350px;
     height: 250px;
     border: 1px solid #e9e9ec;
-    padding: 80px;
+    padding: 20px;
     box-shadow: 0 2px 5px 0 #a8a8a8;
     margin-left: auto;
     margin-right: auto;
     margin-top: 100px;
+}
+
+.footerLinks{
+    list-style: none;
+    color: white;
 }
 
