@@ -2,12 +2,7 @@ import React from "react";
 import ItemCount from "./ItemCount";
 import { useContext, useState } from "react";
 import { CartContext } from "./Context";
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card'
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import Image from 'react-bootstrap/Image'
+
 
 function ItemDetail({ producto, id }) {
   const { name, precio, imagen } = producto;
@@ -26,20 +21,23 @@ function ItemDetail({ producto, id }) {
   };
 
   return (
-        <Container className="detailContainer"> 
-          <Image src={imagen} alt="" className="imgDetail"/>
-          <Card>
-            <Row className="justify-content-md-center">
-              <Col md="auto"><Card.Title className="text-center">{name}</Card.Title>
-              <p className="text-center"> ${precio}</p>
-              <ItemCount initial={1} producto={producto} onAdd={onAdd} />
-              <Row className="justify-content-md-center">
-              <button onClick={() => addToCart(item)} className=" text-center btn btn-outline-dark" >Confirmar</button>
-              </Row>
-              </Col>
-            </Row>
-          </Card>
-          </Container>
+    <div className="containerDetail">
+    <div className="itemDetail">
+      <div className="imageContainer">
+        <img src={imagen} alt="" />
+      </div>
+      <h4>{name}</h4>
+      <p> Precio: ${precio}</p>
+      <ItemCount initial={1} producto={producto} onAdd={onAdd} />
+
+      <button 
+        onClick={() => addToCart(item)}
+        className=" text-center btn btn-outline-dark"
+      >
+        Confirmar
+      </button>
+    </div>
+  </div>
   );
 }
 

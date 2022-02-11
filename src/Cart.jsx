@@ -39,22 +39,42 @@ const Cart = () => {
     }
 
     return(
-        <>
-         <Col className='col-md-4'>
-            { carritoVacio ? <h2>No hay productos agregados</h2> : carArray.map((item)=> (<CartItem key={item.id} producto={item.producto} cantidad={item.cantidad} id={item.id}/>))
-            }
-        </Col>
-        
-        <Col className="cartCompra">
-            <button onClick={clearCart} className="btn btn-danger">Vaciar carro</button>
-            
-            <button onClick={crearOrden} className="btn btn-dark">Confirmar compra</button>
-        
+        <div className="containerDetail">
+      {carritoVacio ? (
+        <h2>No hay productos agregados</h2>
+      ) : (
+        <div className="containerCart">
+          {carArray.map((item) => (
+            <CartItem
+              key={item.id}
+              producto={item.producto}
+              cantidad={item.cantidad}
+              id={item.id}
+            />
+          ))}
+        </div>
+      )}
+          <div className="botonera">
+            <button onClick={clearCart} className="btn btn-danger">
+              Vaciar carro
+            </button>
+
+            <button onClick={crearOrden} className="btn btn-dark">
+              Confirmar compra
+            </button>
+
             <h4 className="text-center"> Total = ${priceTotal()}</h4>
-            {orden && <p className="center"> Muchas gracias por elegirnos, su numero de orden es: {orden} </p>}
-        </Col>
-        </>
-    )
-}
+            {orden && (
+              <p className="text-center">
+                {" "}
+                Muchas gracias por elegirnos, su numero de orden es: {
+                  orden
+                }{" "}
+              </p>
+            )}
+          </div>
+    </div>
+  );
+};
 
 export default Cart

@@ -7,13 +7,13 @@ import Row from "react-bootstrap/Row"
 function Item({producto}){  
     const {name, precio, imagen, id} = producto
     return(
-        <Col className='col-md-4'>
+        <Col   xs={6} md={4}>
         <Card className="cardContainer">
+            
+            <Card.Body>
             <Container style={{width:'200px', height:'200px'}}>
                 <img src={imagen} alt="" className="imgCard"/>
             </Container>
-            
-            <Card.Body>
                 <Card.Title className="card-tittle text-center">{name}</Card.Title>
                 <p className="text-center">${precio}</p>
                 <Link to={"/producto/"+id}>

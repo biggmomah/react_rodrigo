@@ -36,11 +36,11 @@ const ItemCount= ({ producto , initial , onAdd }) => {
     return(
         <Row className='justify-content-md-center'>
             <Col>
-                <Button type="button" onClick={aumentarContador} variant="outline-primary">Agregar</Button>
+                <Button type="button" onClick={aumentarContador} variant="outline-success">Agregar</Button>
             </Col>
 
             <Col>
-                <Button type="button" onClick={disminuirContador} variant='outline-primary' >Restar</Button>
+                <Button type="button" onClick={disminuirContador} variant='outline-danger' >Restar</Button>
             </Col>
 
             <Col>

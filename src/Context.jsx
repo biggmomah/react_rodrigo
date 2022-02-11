@@ -21,7 +21,7 @@ const CartProvider = ({children}) =>{
           Swal.fire(
             'Producto ya solicitado!',
             'Ya agregaste este producto antes',
-            'success'
+            'error'
           )
 
         }else{
