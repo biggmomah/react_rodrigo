@@ -3,8 +3,6 @@ import {db} from './firebase'
 import {collection, addDoc} from 'firebase/firestore'
 import {CartContext, clearCart} from './Context'
 import CartItem from "./CartItem";
-import Row from 'react-bootstrap/Row'
-import Col from "react-bootstrap/Col";
 import { useState } from "react";
 
 const Cart = () => {

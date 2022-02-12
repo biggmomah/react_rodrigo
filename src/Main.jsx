@@ -2,7 +2,6 @@ import ItemListCointainer from "./ItemListContainer";
 import ItemDetailCointaner from "./ItemDetailCointainer";
 import Cart from "./Cart";
 import {Routes, Route} from 'react-router-dom'
-import CartWidget from "./CartWidget";
 
 function Main(){
     return(

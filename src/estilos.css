@@ -17,8 +17,6 @@
     width: 100%;
     justify-content: center;
     padding: 50px;
-    
-    
 }
 
 .itemDetail{
@@ -51,9 +49,12 @@
 }
 .botonera{
     display: flex;
-    position: static;
     flex-direction: column;
     justify-content: center;
+    align-content: center;
+    max-width: 20%;
+    max-height: 10%;
+
 }
 
 .botonera button{
@@ -64,3 +65,11 @@
     background: rgba( 0, 0, 0, 0.5)
 }
 
+.precioDetail{
+    display: flex;
+    flex-direction: column;
+    height: 10rem;
+    width: 10rem;
+    padding: 30px;
+    
+}

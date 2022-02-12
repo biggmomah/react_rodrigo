@@ -27,8 +27,10 @@ function ItemDetail({ producto, id }) {
         <img src={imagen} alt="" />
       </div>
       <h4>{name}</h4>
-      <p> Precio: ${precio}</p>
       <ItemCount initial={1} producto={producto} onAdd={onAdd} />
+
+      <div className="precioDetail">
+      <p > Precio: ${precio}</p>
 
       <button 
         onClick={() => addToCart(item)}
@@ -36,6 +38,7 @@ function ItemDetail({ producto, id }) {
       >
         Confirmar
       </button>
+      </div>
     </div>
   </div>
   );

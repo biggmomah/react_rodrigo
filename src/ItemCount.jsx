@@ -36,18 +36,18 @@ const ItemCount= ({ producto , initial , onAdd }) => {
     return(
         <Row className='justify-content-md-center'>
             <Col>
-                <Button type="button" onClick={aumentarContador} variant="outline-success">Agregar</Button>
+                <Button type="button" onClick={aumentarContador} variant="outline-success">+</Button>
+            </Col>
+            <Col>
+            <p className='text-center'>Cantidad : {contador}</p>
             </Col>
 
             <Col>
-                <Button type="button" onClick={disminuirContador} variant='outline-danger' >Restar</Button>
+                <Button type="button" onClick={disminuirContador} variant='outline-danger' >-</Button>
             </Col>
 
-            <Col>
                 <Button type="button" onClick={resetearContador} variant='outline-primary'>Reiniciar</Button>
-            </Col>
 
-            <p className='text-center'>Contador actual: {contador}</p>
         </Row>
     )
 }
