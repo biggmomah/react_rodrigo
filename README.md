@@ -17,10 +17,10 @@ En la dirección del proyecto puede iniciarlo con:
 
 
 # Que se utilizo en el proyecto:
-HTML5
-React Router Dom
-SASS como compilador de CSS
+HTML5.
+React Router Dom.
+SASS como compilador de CSS.
 Diseños y estilo propio.
-Sweet alerta 2
-GIT y NPM
-Firebase para creacion e integración de base de datos
+Sweet alerta 2.
+GIT y NPM.
+Firebase para creacion e integración de base de datos.
