@@ -1,6 +1,6 @@
 # E-Commerce
 
-Proyecto de REACT Js para CoderHouse. Primero proyecto en REACT realizado.
+Proyecto de REACT Js para CoderHouse realizado por Rodrigo Figueroa. Primer proyecto en REACT.
 
 # ¿De que trata el proyecto?
 
@@ -9,9 +9,10 @@ Se enfoca en ofrecer productos de mineria al público.
 
 # Tecnologias utilizadas:
 
-Este sitio fue creado con Create React App, puede visualizarlo aqui:  https://xenodochial-joliot-e792b4.netlify.app/
-En la dirección del proyecto puede iniciarlo con:
+Este sitio fue creado con Create React App, puede visualizarlo aqui:  
+### https://xenodochial-joliot-e792b4.netlify.app/
 
+En la dirección del proyecto puede iniciarlo con:
 ### npm start
 
 
