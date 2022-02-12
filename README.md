@@ -21,6 +21,6 @@ HTML5.
 React Router Dom.
 SASS como compilador de CSS.
 Diseños y estilo propio.
-Sweet alerta 2.
+Sweet alert 2.
 GIT y NPM.
 Firebase para creacion e integración de base de datos.
