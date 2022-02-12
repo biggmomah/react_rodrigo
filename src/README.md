@@ -1,0 +1,20 @@
+E-Commerce
+
+Proyecto de REACT Js para CoderHouse. Primero proyecto en REACT realizado.
+
+¿De que trata el proyecto?
+
+Con el auge de nuevas maneras de generar ingresos y ayudar a mantener la blockchain funcionando, muchas personas empezaron a minar y a ofrecer servicios referido a la mineria.
+
+Tecnologias utilizadas:
+
+Este sitio fue creado con Create React App, puede visualizarlo aqui:  https://xenodochial-joliot-e792b4.netlify.app/
+
+Que se utilizo en el proyecto:
+HTML5
+React Router Dom
+SASS como compilador de CSS
+Diseños y estilo propio.
+Sweet alerta 2
+GIT y NPM
+Firebase para creacion e integración de base de datos
