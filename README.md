@@ -12,7 +12,7 @@ Se enfoca en ofrecer productos de mineria al público.
 Este sitio fue creado con Create React App, puede visualizarlo aqui:  https://xenodochial-joliot-e792b4.netlify.app/
 En la dirección del proyecto puede iniciarlo con:
 
-### npm star
+### npm start
 
 
 # Que se utilizo en el proyecto:
